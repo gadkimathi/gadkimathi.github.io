@@ -1,27 +1,39 @@
-/* ------------------- General Styling ------------------- */
-body {
-    font-family: Arial, sans-serif;
-}
-
-/* ------------------- Hero Section Background ------------------- */
+/* hero background image */
 .bgimage {
-    height: 100vh;
-    background: url('images/nbm.jpeg') no-repeat center center/cover;
-    position: relative;
+    height:100vh;
+    background: url('images/gh.jpeg');
+    background-size:cover;
+    position:relative;
 }
-
-/* ------------------- Hero Text Animation (Fade-in & Slide-up) ------------------- */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* text css above hero image*/
+.hero_title {
+    font-size: 4.5rem;
 }
-
+.hero_desc {
+    font-size: 2rem;
+}
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(26, 23, 23);
+}
+/* hero background image */
+.bgimage {
+    height:100vh;
+    background: url('images/nbm.jpeg');
+    background-size:cover;
+    position:relative;
+}
+/* text css above hero image*/
+.hero_title {
+    font-size: 4.5rem;
+}
+.hero_desc {
+    font-size: 2rem;
+}
 .hero-text {
     text-align: center;
     position: absolute;
@@ -29,146 +41,55 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     color: rgb(252, 251, 251);
-    animation: fadeInUp 1.5s ease-in-out;
 }
-
-.hero_title {
-    font-size: 4.5rem;
-}
-
-.hero_desc {
-    font-size: 2rem;
-}
-
-/* ------------------- Rotating Gears Animation (Mechatronics) ------------------- */
-@keyframes rotateGear {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-.gear {
-    width: 80px;
-    height: 80px;
-    background: url('images/gear.png') no-repeat center;
-    background-size: contain;
-    position: absolute;
-    animation: rotateGear 4s linear infinite;
-}
-
-.gear1 { top: 10%; left: 10%; }
-.gear2 { top: 20%; left: 80%; animation-duration: 5s; }
-.gear3 { top: 60%; left: 50%; animation-duration: 6s; }
-
-/* ------------------- Binary Data Stream Animation (Data Science) ------------------- */
-@keyframes dataFlow {
-    from {
-        transform: translateY(0);
-        opacity: 1;
-    }
-    to {
-        transform: translateY(100px);
-        opacity: 0;
-    }
-}
-
-.data-stream {
-    position: absolute;
-    font-size: 20px;
-    color: #00ffcc;
-    animation: dataFlow 3s linear infinite;
-}
-
-.data1 { left: 40px; animation-delay: 0s; }
-.data2 { left: 100px; animation-delay: 1s; }
-.data3 { left: 200px; animation-delay: 2s; }
-.data4 { left: 300px; animation-delay: 3s; }
-
-/* ------------------- Neural Network Animation (AI) ------------------- */
-@keyframes pulse {
-    0% { transform: scale(1); opacity: 0.6; }
-    50% { transform: scale(1.2); opacity: 1; }
-    100% { transform: scale(1); opacity: 0.6; }
-}
-
-.neuron {
-    width: 20px;
-    height: 20px;
-    background-color: cyan;
-    border-radius: 50%;
-    position: absolute;
-    animation: pulse 2s infinite;
-}
-
-.neuron1 { top: 50px; left: 100px; }
-.neuron2 { top: 120px; left: 200px; animation-delay: 0.5s; }
-.neuron3 { top: 180px; left: 300px; animation-delay: 1s; }
-
-/* ------------------- About Section Image ------------------- */
+/* about section image css */
 .imageAboutPage {
     width: 100%;
 }
-
-/* ------------------- Services Section ------------------- */
+/* services section css */
 .servicesText.card {
     height: 280px;
     cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-}
-
+  }
 .servicesIcon {
     font-size: 36px;
     text-align: center;
     width: 100%;
 }
-
 .card-title {
     text-align: center;
 }
-
 .card:hover .servicesIcon {
     color: #008000;
 }
-
 .servicesText:hover {
-    transform: scale(1.05);
     border: 1px solid #008000;
 }
-
-/* ------------------- Navbar Styling ------------------- */
+/* display background color black on navbar scroll */
 .navbarScroll.navbarDark {
     background-color: black;
 }
-
-/* ------------------- Social Media Icons ------------------- */
+/* social media icons styling */
 .social-icons {
     font-size: 36px;
     cursor: pointer;
 }
-
-.fa-facebook:hover, .fa-instagram:hover, .fa-twitter:hover, .fa-linkedin:hover {
+.fa-facebook:hover,.fa-instagram:hover,.fa-twitter:hover,.fa-linkedin:hover, .fa-twitch:hover {
     color: #008000;
 }
-
 .fab {
     color: #000000;
 }
-
-/* ------------------- Footer ------------------- */
+/* footer styling */
 #footer {
     background-color: #808080;
     text-align: center;
 }
-
-/* ------------------- Sections Spacing ------------------- */
+/* spacing on all sections */
 #about, #services, #portfolio, #contact {
     margin-top: 4rem;
     padding-top: 4rem;
 }
-
 #contact {
     padding-bottom: 4rem;
 }
