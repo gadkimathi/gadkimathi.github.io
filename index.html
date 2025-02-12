@@ -1,20 +1,20 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Portfolio Website - Gad</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Linking CSS -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Bootstrap CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Font Awesome -->
-    <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
+  <title>Portfolio Website - Gad</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- linking css file -->
+  <link rel="stylesheet" href="style.css">
+  <!-- bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <!-- Navbar -->
+    <!-- navbar -->
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark navbarScroll">
         <div class="container">
             <a class="navbar-brand" href="#">Gad</a>
@@ -43,34 +43,19 @@
         </div>
     </nav>
 
-    <!-- Main Banner (Hero Section) -->
+    <!-- main banner -->
     <section class="bgimage" id="home">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-12 hero-text">
-                    <h1 class="hero_title">Gad Kimathi</h1>
-                    <p class="hero_desc">Mechatronics Engineer & Data Scientist</p>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text">
+                    <h1 class="hero_title">Gad Kimathi </h1>
+                    <p class="hero_desc">Mechatronics engineer</p>
                 </div>
             </div>
         </div>
-        <!-- Gears (Mechatronics Animation) -->
-        <div class="gear gear1"></div>
-        <div class="gear gear2"></div>
-        <div class="gear gear3"></div>
-
-        <!-- Binary Data Stream (Data Science Animation) -->
-        <div class="data-stream data1">0 1 0 1 1 0</div>
-        <div class="data-stream data2">1 0 1 0 1 0</div>
-        <div class="data-stream data3">0 1 1 0 0 1</div>
-        <div class="data-stream data4">1 0 0 1 1 0</div>
-
-        <!-- Neural Network Nodes -->
-        <div class="neuron neuron1"></div>
-        <div class="neuron neuron2"></div>
-        <div class="neuron neuron3"></div>
     </section>
 
-    <!-- About Section -->
+    <!-- about section-->
     <section id="about">
         <div class="container mt-4 pt-4">
             <h1 class="text-center">About Me</h1>
@@ -79,13 +64,30 @@
                     <img src="images/portfolioimage.png" class="imageAboutPage" alt="">
                 </div>
                 <div class="col-lg-8">
-                    <p>I'm a passionate mechatronics engineer and a dedicated student at Dedan Kimathi University in Kenya. I specialize in **Siemens TIA Portal**, industrial automation, and data science.</p>
+                    <p> I'm a passionate mechatronics engineer and a dedicated student at Dedan Kimathi University in Kenya, where I'm honing my skills and knowledge in the exciting field of mechatronics. My journey as an engineering student has fueled my curiosity for innovation and problem-solving.</p>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Name: Gad Kimathi</li>
+                                <li>Age: 22</li>
+                                <li>Occupation: Mechatronics engineer</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Experience: 3 years</li>
+                                <li>Languages expertise: JS, C, Python</li>
+                                <li>Level: Intermediate</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p>My expertise extends to the Siemens TIA (Totally Integrated Automation) Portal, a comprehensive software platform for industrial automation and control systems.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- services section-->
     <section id="services">
         <div class="container">
             <h1 class="text-center">Services</h1>
@@ -93,27 +95,27 @@
                 <div class="col-lg-4 mt-4">
                     <div class="card servicesText">
                         <div class="card-body">
-                            <i class="fas servicesIcon fa-cogs"></i>
+                            <i class="fas servicesIcon fa-clock"></i>
                             <h4 class="card-title mt-3">Mechatronics System Design</h4>
-                            <p class="card-text mt-3">Integrating mechanics, electronics, and automation to create advanced systems.</p>
+                            <p class="card-text mt-3">Designing and developing systems that integrate mechanical and electronic engineering.</p>
                         </div>
                     </div>  
                 </div>
                 <div class="col-lg-4 mt-4">
                     <div class="card servicesText">
                         <div class="card-body">
-                            <i class='fas servicesIcon fa-microchip'></i>
-                            <h4 class="card-title mt-3">Embedded Systems</h4>
-                            <p class="card-text mt-3">Developing embedded software for real-world automation applications.</p>
+                            <i class='fas servicesIcon fa-layer-group'></i>
+                            <h4 class="card-title mt-3">Electronics Design and Prototyping</h4>
+                            <p class="card-text mt-3">Designing circuits and prototypes for custom electronics solutions.</p>
                         </div>
                     </div>  
                 </div>
                 <div class="col-lg-4 mt-4">
                     <div class="card servicesText">
                         <div class="card-body">
-                            <i class='fas servicesIcon fa-brain'></i>
-                            <h4 class="card-title mt-3">Machine Learning & Data Science</h4>
-                            <p class="card-text mt-3">Building AI-driven models for predictive analytics and automation.</p>
+                            <i class='far servicesIcon fa-check-circle'></i>
+                            <h4 class="card-title mt-3">Website Development</h4>
+                            <p class="card-text mt-3">Creating visually appealing and user-friendly websites.</p>
                         </div>
                     </div>  
                 </div>
@@ -121,11 +123,61 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- portfolio section-->
+    <section id="portfolio">
+        <div class="container mt-3">
+            <h1 class="text-center">Portfolio</h1>
+            <div class="row">
+                <div class="col-lg-4 mt-4">
+                    <div class="card">
+                        <img class="card-img-top" src="images/cad.jpeg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">Electronic Fleet Mobility</h4>
+                            <p class="card-text">Projects on converting bikes into electric bikes.</p>
+                            <div class="text-center">
+                                <a href="http://192.168.100.43:8501" class="btn btn-success" target="_blank">View Dashboard</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-4">
+                    <div class="card portfolioContent">
+                        <img class="card-img-top" src="images/sm.jpeg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">TIA Portal Projects</h4>
+                            <p class="card-text">Projects that can be simulated in Factory I/O.</p>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-success">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mt-4">
+                    <div class="card portfolioContent">
+                        <img class="card-img-top" src="images/tia.jpeg" alt="Card image" style="width:100%">
+                        <div class="card-body">
+                            <h4 class="card-title">Website Development</h4>
+                            <p class="card-text">Development of a hostel payment structure.</p>
+                            <div class="text-center">
+                                <a href="#" class="btn btn-success">Link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact section-->
     <section id="contact">
         <div class="container mt-3 contactContent">
             <h1 class="text-center">Contact Me</h1>
             <div class="row mt-4">
+                <div class="col-lg-6">
+                    <iframe src="https://www.google.com/maps/embed/v1/place?q=DEDAN+KIMATHI+UNIVERSITY+OF+TECHNOLOGY,+B5,+Nyeri,+Kenya&key=YOUR_GOOGLE_MAPS_API_KEY" frameborder="0" style="width:100%; height:100%;"></iframe>
+                </div>
                 <div class="col-lg-6">
                     <form>
                         <input type="text" class="form-control form-control-lg" placeholder="Name">
@@ -139,13 +191,16 @@
         </div>
     </section>
 
-    <!-- Footer Section -->
+    <!-- footer section-->
     <footer id="footer">
         <div class="container-fluid">
             <div class="social-icons mt-4">
+                <a href="https://www.facebook.com/gadkimathi/" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/gadkimathi/" class="instagram"><i class="fab fa-instagram"></i></a>
                 <a href="https://www.linkedin.com/in/gadkimathi/" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
     </footer>
+
 </body>
 </html>
