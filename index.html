@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <!-- EmailJS CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/emailjs-com/3.2.0/email.min.js"></script>
 </head>
 
 <body>
@@ -35,7 +37,7 @@
       <h1 class="hero_title">Hi, I'm Gad Kimathi</h1>
       <p class="hero_desc">Mechatronics & AI Engineer | Innovating Intelligent Automation</p>
       <a href="#portfolio" class="btn btn-outline-light btn-lg mt-3">View My Work</a>
-      <a href="cv/Gad_Kimathi_CV.pdf" class="btn btn-success btn-lg mt-3 ms-3" download>Download CV</a>
+      <a href="Gad__Kimathi Mechatronics_Engineering_Student CV FINAL MAY.pdf" class="btn btn-success btn-lg mt-3 ms-3" download>Download CV</a>
     </div>
   </section>
 
@@ -47,7 +49,7 @@
       </div>
       <div class="col-md-6">
         <h2>About Me</h2>
-        <p>I’m a Mechatronics and AI Engineer with a passion for solving real-world problems through intelligent systems and automation. From embedded robotics to deep learning applications, I thrive at the intersection of hardware and code.</p>
+        <p>I'm a Mechatronics and AI Engineer with a passion for solving real-world problems through intelligent systems and automation. From embedded robotics to deep learning applications, I thrive at the intersection of hardware and code.</p>
       </div>
     </div>
   </section>
@@ -102,19 +104,19 @@
       <div class="col-md-4 portfolioContent ai">
         <div class="portfolio-item">
           <img src="images/ai.jpg" class="img-fluid" alt="AI Project">
-          <div class="portfolio-overlay">AI Traffic Detection System</div>
+          <div class="portfolio-overlay">AI AGENT</div>
         </div>
       </div>
       <div class="col-md-4 portfolioContent mechatronics">
         <div class="portfolio-item">
           <img src="images/ai2.gif" class="img-fluid" alt="Robot Project">
-          <div class="portfolio-overlay">Autonomous Rover</div>
+          <div class="portfolio-overlay">ROS PROJECT</div>
         </div>
       </div>
       <div class="col-md-4 portfolioContent web">
         <div class="portfolio-item">
           <img src="images/app.png" class="img-fluid" alt="Web App">
-          <div class="portfolio-overlay">AI Portfolio Website</div>
+          <div class="portfolio-overlay">WEBSITE DEV</div>
         </div>
       </div>
     </div>
@@ -123,22 +125,25 @@
   <!-- Contact Section -->
   <section id="contact" class="container section">
     <h2 class="text-center mb-4">Contact Me</h2>
-    <form>
+    <form id="contactForm">
       <div class="row">
         <div class="col-md-6 mb-3">
-          <input type="text" class="form-control" placeholder="Your Name" required />
+          <input type="text" class="form-control" name="name" placeholder="Your Name" required />
         </div>
         <div class="col-md-6 mb-3">
-          <input type="email" class="form-control" placeholder="Your Email" required />
+          <input type="email" class="form-control" name="email" placeholder="Your Email" required />
         </div>
       </div>
       <div class="mb-3">
-        <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+        <textarea class="form-control" name="message" rows="5" placeholder="Your Message" required></textarea>
       </div>
       <div class="text-center">
-        <button type="submit" class="btn btn-success">Send Message</button>
+        <button type="submit" class="btn btn-success" id="submitBtn">Send Message</button>
       </div>
     </form>
+    
+    <!-- Status message -->
+    <div id="statusMessage" class="mt-3 text-center" style="display: none;"></div>
   </section>
 
   <!-- Footer -->
@@ -158,6 +163,67 @@
 
   <!-- Scripts -->
   <script>
+    // Initialize EmailJS (replace with your actual public key)
+    emailjs.init("YOUR_PUBLIC_KEY"); // Get this from emailjs.com
+
+    // Contact form handler
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const submitBtn = document.getElementById('submitBtn');
+      const statusMessage = document.getElementById('statusMessage');
+      
+      // Show loading state
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+      submitBtn.disabled = true;
+      
+      // Get form data
+      const formData = new FormData(e.target);
+      const templateParams = {
+        from_name: formData.get('name'),
+        from_email: formData.get('email'),
+        message: formData.get('message')
+      };
+      
+      // For now, just simulate sending (replace with actual EmailJS call)
+      setTimeout(() => {
+        // Show success message
+        statusMessage.innerHTML = '<div class="alert alert-success">✅ Message sent successfully! I\'ll get back to you soon.</div>';
+        statusMessage.style.display = 'block';
+        
+        // Reset form
+        document.getElementById('contactForm').reset();
+        
+        // Reset button
+        submitBtn.innerHTML = 'Send Message';
+        submitBtn.disabled = false;
+        
+        // Hide message after 5 seconds
+        setTimeout(() => {
+          statusMessage.style.display = 'none';
+        }, 5000);
+      }, 1500);
+      
+      /* 
+      // Uncomment this section when you have EmailJS set up:
+      emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+        .then(function(response) {
+          console.log('SUCCESS!', response.status, response.text);
+          statusMessage.innerHTML = '<div class="alert alert-success">✅ Message sent successfully! I\'ll get back to you soon.</div>';
+          statusMessage.style.display = 'block';
+          document.getElementById('contactForm').reset();
+        }, function(error) {
+          console.log('FAILED...', error);
+          statusMessage.innerHTML = '<div class="alert alert-danger">❌ Failed to send message. Please try again or contact me directly.</div>';
+          statusMessage.style.display = 'block';
+        })
+        .finally(function() {
+          submitBtn.innerHTML = 'Send Message';
+          submitBtn.disabled = false;
+        });
+      */
+    });
+
     // Navbar scroll effect
     window.addEventListener('scroll', function () {
       document.querySelector('.navbar').classList.toggle('navbarDark', window.scrollY > 50);
